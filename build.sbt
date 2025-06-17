@@ -10,5 +10,7 @@ lazy val root = (project in file("."))
       "org.scalatest" %% "scalatest" % "3.2.17" % Test,
       "org.typelevel" %% "cats-core" % "2.10.0",
       "org.typelevel" %% "spire" % "0.18.0"
-    )
+    ),
+    javacOptions ++= Seq("--release", "17"),
+    scalacOptions ++= Seq("-java-output-version", "17")
   )
